@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: 'Crimes';
+    src: url(fonts/crimes.ttf);
+}
+
+@font-face {
+    font-family: 'Scream Zombie';
+    src: url(fonts/ScreamZombie.ttf);
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10%;
+    background-color: #06161e;
+}
+
+h1{
+    font-family: 'Scream Zombie';
+    font-size: 100px;
+    margin: 7%;
+    letter-spacing: 10px;
+    color: #d8961b;
+}
+
+p{
+    font-family: 'Crimes';
+}
+
+#btn-inicio{
+    width: 100px;
+    height: 50px;
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: #ffa400;
+    border: none;
+    font-weight: bold;
+    cursor: grab;
+    outline: none;
+    transition: 0.5s;
+}
+
+#btn-inicio:hover{
+    transform: scale(1.1);
+    background-color: #0c2b3b;
+}
