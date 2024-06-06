@@ -6,12 +6,12 @@
 
 @font-face{
     font-family: 'Crimes';
-    src: url(fonts/crimes.ttf);
+    src: url(../fonts/crimes.ttf);
 }
 
 @font-face {
     font-family: 'Scream Zombie';
-    src: url(fonts/ScreamZombie.ttf);
+    src: url(../fonts/ScreamZombie.ttf);
 }
 
 body{
