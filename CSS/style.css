@@ -1,12 +1,12 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-@font-face{
-    font-family: 'Crimes';
-    src: url(../fonts/crimes.ttf);
+@font-face {
+    font-family: 'Name Smile';
+    src: url(../fonts/NameSmile.otf);
 }
 
 @font-face {
@@ -14,7 +14,9 @@
     src: url(../fonts/ScreamZombie.ttf);
 }
 
-body{
+body {
+    background-blend-mode: hard-light;
+    background-image: url(../img/fundo1.gif);
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -22,34 +24,95 @@ body{
     flex-direction: column;
     gap: 10%;
     background-color: #06161e;
+    overflow-x: hidden;
 }
 
-h1{
+/* TITULO */
+h1 {
     font-family: 'Scream Zombie';
     font-size: 100px;
-    margin: 7%;
+    margin-top: 7%;
     letter-spacing: 10px;
     color: #d8961b;
 }
 
-p{
-    font-family: 'Crimes';
+/* DESCRIÇÃO */
+.intro {
+    width: 950px;
+    display: flex;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+
 }
 
-#btn-inicio{
-    width: 100px;
+p {
+    margin: 0;
+    white-space: pre-wrap;
+    color: white;
+    display: inline;
+    letter-spacing: 3px;
+    font-family: 'Name Smile';
+}
+
+/* CURSOR DE TERMINAL */
+#cursor {
+    display: inline-block;
+    width: 10px;
+    height: 20px;
+    background-color: #f7ff06;
+    margin-left: 2px;
+    animation: blink 1s step-end infinite;
+    position: relative;
+
+}
+
+@keyframes blink {
+
+    from,
+    to {
+        background-color: transparent;
+    }
+
+    50% {
+        background-color: #f7ff06;
+    }
+}
+
+/* BOTÃO INICIO */
+
+#floatingButton {
+    width: 200px;
     height: 50px;
     font-size: 15px;
     border-radius: 10px;
-    background-color: #ffa400;
+    background-color: #d8961b;
     border: none;
+    letter-spacing: 2px;
     font-weight: bold;
     cursor: grab;
     outline: none;
-    transition: 0.5s;
+    transition: all 0.5s;
+    color: #06161E;
+    font-family: 'Name Smile';
+    animation: float 2s ease-in-out infinite;
+
 }
 
-#btn-inicio:hover{
-    transform: scale(1.1);
-    background-color: #0c2b3b;
+#floatingButton:hover {
+    background-color: #0000;
+    color: #d8961b;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
