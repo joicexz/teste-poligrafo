@@ -4,6 +4,97 @@
     box-sizing: border-box;
 }
 
-body{
-    background-color: black;
+@font-face {
+    font-family: 'Monster';
+    src: url(../fonts/Monster.ttf);
+}
+
+body {
+    background-image: url(../img/giphy.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/* TITULO */
+h1,
+.intro {
+    font-family: 'Monster';
+    color: brown;
+    font-size: 100px;
+}
+
+.intro {
+    margin-bottom: 75px;
+    font-size: 30px;
+}
+
+#terminal {
+    background-color: rgba(0, 0, 0, 90%);
+    width: 600px;
+    height: 300px;
+    border-radius: 20px;
+    position: relative;
+    border: rgb(67, 227, 67) 2px solid;
+    padding: 45px;
+    font-size: 20px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+}
+
+p {
+    white-space: pre-wrap;
+    color: white;
+    display: inline;
+    font-size: 25px;
+    font-family: monospace;
+
+}
+
+/* BOTÕES */
+button {
+    background-color: red;
+    color: #fff;
+    font-size: 20px;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-family: monospace;
+    border-radius: 10px;
+    width: 150px;
+    transition: all 0.5s;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#loading {
+    color: white;
+    font-size: 25px;
+    font-family: monospace;
+    animation: loading 1s infinite;
+}
+
+@keyframes loading {
+    0% {
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.2;
+    }
 }

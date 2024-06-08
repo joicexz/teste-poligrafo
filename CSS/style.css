@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -48,12 +50,13 @@ h1 {
 }
 
 p {
-    margin: 0;
+    font-size: 25px;
     white-space: pre-wrap;
     color: white;
     display: inline;
-    letter-spacing: 3px;
-    font-family: 'Name Smile';
+    letter-spacing: 2px;
+    font-weight: bolder;
+    font-family: "Bebas Neue", sans-serif;
 }
 
 /* CURSOR DE TERMINAL */

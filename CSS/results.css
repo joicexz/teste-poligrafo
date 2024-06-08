@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Monster';
+    src: url(../fonts/Monster.ttf);
+}
+
+@font-face {
+    font-family: 'Name Smile';
+    src: url(../fonts/NameSmile.otf);
+}
+
+body {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: monospace;
+    flex-direction: column;
+}
+
+#res-div {
+    width: 800px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+#resp {
+    font-size: 55px;
+    margin-left: 45px;
+    font-family: 'Monster';
+}
+
+.suspeito {
+    color: green;
+}
+
+.cumplice {
+    color: yellow;
+}
+
+.culpado {
+    color: red;
+}
+
+#msg {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    width: 70rem;
+}
+
+#img-result {
+    border-radius: 20px;
+    width: 350px;
+}
+
+#floatingButton {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: #d8961b;
+    border: none;
+    letter-spacing: 2px;
+    font-weight: bold;
+    cursor: grab;
+    outline: none;
+    transition: all 0.5s;
+    color: #06161E;
+    font-family: 'Name Smile';
+    animation: float 2s ease-in-out infinite;
+
+}
+
+#floatingButton:hover {
+    background-color: #0000;
+    color: #d8961b;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}

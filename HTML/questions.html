@@ -1,13 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/questions.css">
+    <link rel="icon" href="../img/badge.png">
     <title>Document</title>
 </head>
+
 <body>
-    
+
+    <!-- TITULO -->
+    <h1>PROVE SUA INOCÊNCIA</h1>
+    <span class="intro">(OU NÃO)</span>
+
+
+    <div id="terminal">
+        <p id="question"></p>
+        <span id="cursor"></span>
+        <div id="options" style="display: none;">
+
+            <!-- BOTÕES -->
+            <button onclick="selectAnswer('Sim')">Sim</button>
+            <button onclick="selectAnswer('Não')">Não</button>
+        </div>
+
+
+        <div style="display: none;" id="loading">Carregando resultado...</div>
+    </div>
+
     <script src="../JS/questions.js"></script>
 </body>
+
 </html>

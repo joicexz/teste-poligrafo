@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/results.css">
+    <link rel="icon" href="../img/badge.png">
+    <title>Resultado</title>
+</head>
+
+<body>
+    <p id="resp"></p>
+    <div id="res-div">
+        <img src="" id="img-result">
+        <h2 id="msg"></h2>
+    </div>
+
+    <button type="submit" id="floatingButton">Refazer</button>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            let res = localStorage.getItem('resultado');
+
+            if (res) {
+                const respElement = document.getElementById('resp');
+                const msgElement = document.getElementById('msg');
+                const imgElement = document.getElementById('img-result');
+
+                if (res === "Suspeito") {
+                    respElement.textContent = 'Resultado: Suspeito';
+                    respElement.classList.add('suspeito');
+                    msgElement.textContent = 'Por pouco, mas estamos de olho em você.';
+                    imgElement.src = '../img/baixados.jpeg';
+                } else if (res === "Cúmplice") {
+                    respElement.textContent = 'Resultado: Cúmplice';
+                    respElement.classList.add('cumplice');
+                    msgElement.textContent = 'Seu silêncio fala mais do que palavras. Cúmplice confirmado.';
+                    imgElement.src = '../img/cumplice.jpeg';
+                } else {
+                    respElement.textContent = 'Resultado: Culpado';
+                    respElement.classList.add('culpado');
+                    msgElement.textContent = 'Parece que alguem vai ver o sol nascer quadrado.';
+                    imgElement.src = '../img/gretchen-policial.gif';
+                }
+            } else {
+                document.getElementById('msg').textContent = 'Nenhum resultado encontrado.';
+            }
+        });
+        const btn = document.getElementById('floatingButton');
+
+        btn.addEventListener("click", function () {
+            window.location.href = "./index.html"
+        })
+    </script>
+</body>
+
+</html>
